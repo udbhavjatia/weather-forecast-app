@@ -8,6 +8,7 @@ const forecast = require ('./utils/forecast.js')
 //Create Express application
 const app = express();
 
+//To access the heroku port value provided by the environment variable (if it does not exist then run it locally on port 3000)
 const port = process.env.PORT || 3000;
 
 //Define paths for Express configuration

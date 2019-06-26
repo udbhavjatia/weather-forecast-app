@@ -3,6 +3,7 @@
     <head>
         <title>Weather</title>
         <link rel='icon' href='/img/weather.png'>
+        <!-- Importing required style files -->
         <link rel='stylesheet' href='./css/styles.css'>
     </head>
     <body>
@@ -11,18 +12,24 @@
             
             <p>Use this site to get a weather forecast for your location.</p>
 
+            <!-- Weather Form -->
             <form>
                 <input placeholder='Location'>
                 <button>Search</button>
             </form>
+            <!-- /Weather Form -->
 
+            <!-- Output from Weather Form Search -->
             <p id='message-1'></p>
             <p id='message-2'></p>
+            <!-- /Output from Weather Form Search -->
+
         </div>
         
 
         {{>footer}}
 
+        <!-- Importing required scripts -->
         <script src='./js/app.js'></script>
     </body>
 </html>

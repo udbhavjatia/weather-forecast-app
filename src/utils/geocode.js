@@ -1,3 +1,4 @@
+//Importing required modules
 const request = require('request');
 
 const geocode = (address, callback) => {
@@ -18,4 +19,5 @@ const geocode = (address, callback) => {
     });
 };
 
+//To allow the geocode function to be used in the src/app.js file
 module.exports = geocode;

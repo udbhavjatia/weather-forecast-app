@@ -1,3 +1,4 @@
+//Importing required modules
 const request = require('request');
 
 const forecast = (latitude, longitude, callback) => {
@@ -9,9 +10,10 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location.', undefined);
         } else {
-            callback(undefined, `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees and there is ${body.currently.precipProbability}% chance of rain. The temperature range for today is between ${body.daily.data[0].apparentTemperatureLow} degrees and ${body.daily.data[0].apparentTemperatureHigh} degrees.`);
+            callback(undefined, `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees and there is ${body.currently.precipProbability}% chance of rain. The temperature range for today is between ${body.daily.data[0].temperatureLow} degrees and ${body.daily.data[0].temperatureHigh} degrees.`);
         }
     })
 };
 
+//To allow the forecast function to be used in the src/app.js file
 module.exports = forecast;
